@@ -1,0 +1,627 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Grace Raised Me Up - Life Coach</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* Scrolling Animation */
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .animate-scroll {
+      animation: scroll 60s linear infinite;
+    }
+
+    /* Fade In Up Animation */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fadeInUp {
+      animation: fadeInUp 0.6s ease-out;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+<!-- Sidebar -->
+<aside id="sidebar" class="fixed top-0 left-0 h-screen w-64 bg-gradient-to-b from-green-400 via-yellow-300 to-green-700 text-white shadow-xl flex flex-col z-50 transform -translate-x-64 md:translate-x-0 transition-transform duration-300">
+  <div class="p-6 text-2xl font-bold border-b border-white/20 flex items-center justify-between">
+    Navigation
+    <button id="sidebarToggle" class="md:hidden text-white text-2xl">&times;</button>
+  </div>
+  <nav class="flex-1 overflow-y-auto">
+    <ul class="flex flex-col p-4 space-y-3">
+      <li><a href="#hero" class="nav-link block px-4 py-2 rounded-lg transition hover:bg-white/20">Welcome</a></li>
+      <li><a href="#about" class="nav-link block px-4 py-2 rounded-lg transition hover:bg-white/20">Who We Are</a></li>
+      <li><a href="#services" class="nav-link block px-4 py-2 rounded-lg transition hover:bg-white/20">What We Do</a></li>
+      <li><a href="#topics" class="nav-link block px-4 py-2 rounded-lg transition hover:bg-white/20">Our Topics</a></li>
+      <li><a href="#process" class="nav-link block px-4 py-2 rounded-lg transition hover:bg-white/20">How We Do</a></li>
+      <li><a href="#trust" class="nav-link block px-4 py-2 rounded-lg transition hover:bg-white/20">Testimonials</a></li>
+      <li><a href="#contact" class="nav-link block px-4 py-2 rounded-lg transition hover:bg-white/20">Get In Touch</a></li>
+    </ul>
+  </nav>
+  <div class="p-4 border-t border-white/20 text-sm text-white/70">
+    © 2025 Grace Raised Me Up
+  </div>
+</aside>
+
+<button id="sidebarToggleDesktop" class="fixed top-4 left-4 z-50 text-white bg-green-500/80 p-3 rounded-md md:hidden">&#9776;</button>
+
+<main class="ml-0 md:ml-64 transition-all duration-300">
+
+<!-- Hero Section -->
+<section id="hero" class="hero bg-cover bg-center min-h-screen relative" style="background-image: url('images/hero banner.jpg');">
+  <div class="absolute inset-0 bg-blur/30"></div>
+   <!-- Dark overlay for better text readability -->
+  <div class="relative z-10 min-h-screen flex flex-col lg:flex-row items-center justify-between px-4 md:px-8 lg:px-12 py-8">
+    
+    <!-- Text Content -->
+    <div class="text-white w-full lg:w-1/2 mb-8 lg:mb-0 text-center lg:text-left">
+      <h1 class="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 md:mb-6 drop-shadow-lg leading-tight">
+        Grow With Emotional Intelligence
+      </h1>
+      <p class="text-base md:text-lg lg:text-xl mb-6 md:mb-8 drop-shadow max-w-2xl mx-auto lg:mx-0">
+        Empowering leaders and teams with practical EI-based skills.
+      </p>
+      <a href="#services" class="inline-block px-6 py-3 bg-white text-gray-800 rounded-lg font-semibold shadow-md transition hover:shadow-lg hover:scale-105">
+        Explore Services
+      </a>
+    </div>
+    
+    <!-- Contact Form - Back to Extreme Right -->
+    <div class="w-full lg:w-auto max-w-md lg:max-w-sm xl:max-w-md flex-shrink-0">
+      <div class="bg-white/30 backdrop-blur-md p-6 md:p-8 rounded-2xl shadow-lg ring-1 ring-white/20">
+        <h2 class="text-xl md:text-2xl font-bold mb-4 text-gray-900 text-center">Enquire Now</h2>
+        <form id="leadForm">
+          <input type="text" name="name" placeholder="Full Name" required 
+            class="w-full p-3 mb-4 border rounded bg-white/70 focus:outline-none focus:ring-2 focus:ring-blue-400">
+          <input type="email" name="email" placeholder="Email Address" required 
+            class="w-full p-3 mb-4 border rounded bg-white/70 focus:outline-none focus:ring-2 focus:ring-blue-400">
+          <textarea name="message" placeholder="Your Message" required 
+            class="w-full p-3 mb-4 border rounded bg-white/70 focus:outline-none focus:ring-2 focus:ring-blue-400" rows="3"></textarea>
+          <button type="submit" 
+            class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg shadow-lg transition font-bold">
+            Enquire Now
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-16 px-4 md:px-8 bg-gray-100">
+  <h2 class="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12">About Us</h2>
+  <div class="max-w-4xl mx-auto text-center">
+    <p class="text-base md:text-lg">We are dedicated to helping leaders and teams develop emotional intelligence, enhance collaboration, and achieve sustainable growth.</p>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="py-16 px-4 md:px-8 bg-white">
+  <h2 class="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12">Our Services</h2>
+  <div class="max-w-5xl mx-auto">
+    <div class="flex justify-center mb-8 space-x-2 flex-wrap gap-2">
+      <button class="tab-btn px-4 md:px-6 py-2 bg-blue-600 text-white rounded-lg shadow-md transition hover:scale-105 text-sm md:text-base" data-tab="training">Training</button>
+      <button class="tab-btn px-4 md:px-6 py-2 bg-gray-200 text-gray-800 rounded-lg shadow-md transition hover:scale-105 text-sm md:text-base" data-tab="coaching">Coaching</button>
+      <button class="tab-btn px-4 md:px-6 py-2 bg-gray-200 text-gray-800 rounded-lg shadow-md transition hover:scale-105 text-sm md:text-base" data-tab="consulting">Consulting</button>
+      <button class="tab-btn px-4 md:px-6 py-2 bg-gray-200 text-gray-800 rounded-lg shadow-md transition hover:scale-105 text-sm md:text-base" data-tab="workshops">Workshops</button>
+      <button class="tab-btn px-4 md:px-6 py-2 bg-gray-200 text-gray-800 rounded-lg shadow-md transition hover:scale-105 text-sm md:text-base" data-tab="mentoring">Mentoring</button>
+      <button class="tab-btn px-4 md:px-6 py-2 bg-gray-200 text-gray-800 rounded-lg shadow-md transition hover:scale-105 text-sm md:text-base" data-tab="webinars">Webinars</button>
+    </div>
+    
+    <div class="text-center">
+      <div id="training" class="tab-content">
+        <img src="training.jpg" alt="Training" class="mx-auto mb-6 rounded-lg max-w-full md:max-w-md shadow-lg" />
+        <p class="text-base md:text-lg">Comprehensive emotional intelligence training programs designed to enhance leadership capabilities and team collaboration through practical workshops and interactive sessions.</p>
+      </div>
+      <div id="coaching" class="tab-content hidden">
+        <img src="coaching.jpg" alt="Coaching" class="mx-auto mb-6 rounded-lg max-w-full md:max-w-md shadow-lg" />
+        <p class="text-base md:text-lg">Personalized one-on-one coaching sessions focused on developing emotional intelligence, leadership skills, and overcoming professional challenges to unlock your full potential.</p>
+      </div>
+      <div id="consulting" class="tab-content hidden">
+        <img src="consulting.jpg" alt="Consulting" class="mx-auto mb-6 rounded-lg max-w-full md:max-w-md shadow-lg" />
+        <p class="text-base md:text-lg">Strategic consulting services to help organizations build emotionally intelligent workplace cultures, improve team dynamics, and enhance overall business performance.</p>
+      </div>
+      <div id="workshops" class="tab-content hidden">
+        <img src="workshops.jpg" alt="Workshops" class="mx-auto mb-6 rounded-lg max-w-full md:max-w-md shadow-lg" />
+        <p class="text-base md:text-lg">Interactive workshops combining theory and practice to develop essential emotional intelligence skills through real-world scenarios and collaborative learning experiences.</p>
+      </div>
+      <div id="mentoring" class="tab-content hidden">
+        <img src="mentoring.jpg" alt="Mentoring" class="mx-auto mb-6 rounded-lg max-w-full md:max-w-md shadow-lg" />
+        <p class="text-base md:text-lg">Long-term mentoring relationships providing ongoing guidance, support, and expertise to help individuals navigate their leadership journey and achieve sustainable growth.</p>
+      </div>
+      <div id="webinars" class="tab-content hidden">
+        <img src="webinars.jpg" alt="Webinars" class="mx-auto mb-6 rounded-lg max-w-full md:max-w-md shadow-lg" />
+        <p class="text-base md:text-lg">Virtual learning experiences delivering emotional intelligence insights and practical strategies accessible from anywhere, featuring expert-led sessions and interactive Q&A segments.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Our Topics Section -->
+<section id="topics" class="relative min-h-screen bg-cover bg-center overflow-hidden" style="background-image: url('images/topics-bg.jpg');">
+  <!-- Green Gradient Overlay -->
+  <div class="absolute inset-0 bg-gradient-to-br from-green-400/80 via-green-500/70 to-green-600/80"></div>
+  
+  <!-- Scrolling Countries Background Text -->
+  <div class="absolute inset-0 flex items-center justify-center overflow-hidden pointer-events-none">
+    <div class="scrolling-text whitespace-nowrap text-6xl md:text-8xl lg:text-[8rem] xl:text-[10rem] font-bold text-white/10 animate-scroll">
+      United Kingdom • Estonia • Romania • Czech Republic • Germany • Italy • France • United Kingdom • Estonia • Romania • Czech Republic • Germany • Italy • France •
+    </div>
+  </div>
+  
+  <!-- Main Content -->
+  <div class="relative z-10 py-16 px-4 md:px-8">
+    <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-12 text-white drop-shadow-lg">Our Topics</h2>
+    
+    <!-- Translucent Container -->
+    <div class="max-w-6xl mx-auto bg-white/20 backdrop-blur-lg rounded-3xl shadow-2xl ring-1 ring-white/30 p-6 md:p-8 lg:p-12">
+      
+      <!-- Tab Buttons -->
+      <div class="flex flex-wrap justify-center mb-8 gap-3">
+        <button class="topic-tab px-4 md:px-6 py-3 bg-white/30 hover:bg-white/40 text-white font-bold rounded-xl shadow-lg transition-all duration-300 hover:scale-105 backdrop-blur text-sm md:text-base" data-topic="communicate">
+          COMMUNICATE S.M.A.R.T GOALS
+        </button>
+        <button class="topic-tab px-4 md:px-6 py-3 bg-white/20 hover:bg-white/40 text-white font-bold rounded-xl shadow-lg transition-all duration-300 hover:scale-105 backdrop-blur text-sm md:text-base" data-topic="leading">
+          LEADING WITHOUT TITLE
+        </button>
+        <button class="topic-tab px-4 md:px-6 py-3 bg-white/20 hover:bg-white/40 text-white font-bold rounded-xl shadow-lg transition-all duration-300 hover:scale-105 backdrop-blur text-sm md:text-base" data-topic="prioritisation">
+          TASK PRIORITISATION
+        </button>
+        <button class="topic-tab px-4 md:px-6 py-3 bg-white/20 hover:bg-white/40 text-white font-bold rounded-xl shadow-lg transition-all duration-300 hover:scale-105 backdrop-blur text-sm md:text-base" data-topic="decision">
+          DECISION MAKING
+        </button>
+        <button class="topic-tab px-4 md:px-6 py-3 bg-white/20 hover:bg-white/40 text-white font-bold rounded-xl shadow-lg transition-all duration-300 hover:scale-105 backdrop-blur text-sm md:text-base" data-topic="problem">
+          PROBLEM SOLVING
+        </button>
+        <button class="topic-tab px-4 md:px-6 py-3 bg-white/20 hover:bg-white/40 text-white font-bold rounded-xl shadow-lg transition-all duration-300 hover:scale-105 backdrop-blur text-sm md:text-base" data-topic="conflict">
+          RESOLVING CONFLICT
+        </button>
+      </div>
+      
+      <!-- Tab Content -->
+      <div class="text-center text-white relative">
+        <!-- COMMUNICATE S.M.A.R.T GOALS -->
+        <div id="communicate" class="topic-content opacity-100 transition-all duration-500">
+          <div class="animate-fadeInUp">
+            <img src="images/COmmunicarion smatr Goals w.jpg" alt="Communicate SMART Goals" class="mx-auto mb-6 rounded-xl max-w-full md:max-w-lg shadow-2xl" />
+            <h3 class="text-2xl md:text-3xl font-bold mb-4 drop-shadow">Master SMART Goal Communication</h3>
+            <p class="text-base md:text-lg leading-relaxed max-w-3xl mx-auto">
+              Learn to articulate Specific, Measurable, Achievable, Relevant, and Time-bound goals that inspire action. 
+              Develop clear communication strategies that align teams and drive results through effective goal-setting frameworks.
+            </p>
+          </div>
+        </div>
+        
+        <!-- LEADING WITHOUT TITLE -->
+        <div id="leading" class="topic-content opacity-0 absolute inset-0 transition-all duration-500">
+          <div class="animate-fadeInUp pt-16">
+            <img src="images/Lead Without Title Amen.jpg" alt="Leading Without Title" class="mx-auto mb-6 rounded-xl max-w-full md:max-w-lg shadow-2xl" />
+            <h3 class="text-2xl md:text-3xl font-bold mb-4 drop-shadow">Influence Without Authority</h3>
+            <p class="text-base md:text-lg leading-relaxed max-w-3xl mx-auto">
+              Discover how to lead effectively regardless of your position. Master the art of building trust, inspiring others, 
+              and creating positive change through emotional intelligence and authentic leadership principles.
+            </p>
+          </div>
+        </div>
+        
+        <!-- TASK PRIORITISATION -->
+        <div id="prioritisation" class="topic-content opacity-0 absolute inset-0 transition-all duration-500">
+          <div class="animate-fadeInUp pt-16">
+            <img src="images/TAsk Prioritisation.jpg" alt="Task Prioritisation" class="mx-auto mb-6 rounded-xl max-w-full md:max-w-lg shadow-2xl" />
+            <h3 class="text-2xl md:text-3xl font-bold mb-4 drop-shadow">Strategic Task Management</h3>
+            <p class="text-base md:text-lg leading-relaxed max-w-3xl mx-auto">
+              Master advanced prioritisation techniques using proven frameworks like Eisenhower Matrix and MoSCoW method. 
+              Learn to focus on high-impact activities that drive meaningful results and sustainable productivity.
+            </p>
+          </div>
+        </div>
+        
+        <!-- DECISION MAKING -->
+        <div id="decision" class="topic-content opacity-0 absolute inset-0 transition-all duration-500">
+          <div class="animate-fadeInUp pt-16">
+            <img src="images/Decision MAking Amen.jpg" alt="Decision Making" class="mx-auto mb-6 rounded-xl max-w-full md:max-w-lg shadow-2xl" />
+            <h3 class="text-2xl md:text-3xl font-bold mb-4 drop-shadow">Confident Decision Making</h3>
+            <p class="text-base md:text-lg leading-relaxed max-w-3xl mx-auto">
+              Develop systematic approaches to complex decision-making scenarios. Learn to balance analytical thinking with 
+              emotional intelligence to make confident, effective decisions under pressure and uncertainty.
+            </p>
+          </div>
+        </div>
+        
+        <!-- PROBLEM SOLVING -->
+        <div id="problem" class="topic-content opacity-0 absolute inset-0 transition-all duration-500">
+          <div class="animate-fadeInUp pt-16">
+            <img src="images/Problem Solving.jpg" alt="Problem Solving" class="mx-auto mb-6 rounded-xl max-w-full md:max-w-lg shadow-2xl" />
+            <h3 class="text-2xl md:text-3xl font-bold mb-4 drop-shadow">Creative Solution Finding</h3>
+            <p class="text-base md:text-lg leading-relaxed max-w-3xl mx-auto">
+              Master structured problem-solving methodologies including root cause analysis, design thinking, and collaborative 
+              brainstorming techniques to transform challenges into opportunities for growth and innovation.
+            </p>
+          </div>
+        </div>
+        
+        <!-- RESOLVING CONFLICT -->
+        <div id="conflict" class="topic-content opacity-0 absolute inset-0 transition-all duration-500">
+          <div class="animate-fadeInUp pt-16">
+            <img src="images/resolving conflict.jpg" alt="Resolving Conflict" class="mx-auto mb-6 rounded-xl max-w-full md:max-w-lg shadow-2xl" />
+            <h3 class="text-2xl md:text-3xl font-bold mb-4 drop-shadow">Peaceful Conflict Resolution</h3>
+            <p class="text-base md:text-lg leading-relaxed max-w-3xl mx-auto">
+              Learn proven conflict resolution strategies that transform tension into collaboration. Develop skills in active 
+              listening, mediation, and negotiation to create win-win solutions and stronger relationships.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Process Section - FULLY FUNCTIONAL -->
+<section id="process" class="w-screen h-screen bg-gray-900 text-white flex flex-col overflow-hidden relative">
+  <h2 class="text-5xl font-bold text-center absolute top-6 w-full z-20">Our Process</h2>
+  <div class="flex flex-1 pt-20">
+    <div class="w-1/4 bg-gray-800 flex flex-col items-start justify-center p-8 space-y-8">
+      <button class="process-tab text-2xl text-left hover:text-blue-400 cursor-pointer transition" data-target="reflective">1. Reflective Assessment</button>
+      <button class="process-tab text-2xl text-left hover:text-blue-400 cursor-pointer transition" data-target="qa">2. Interactive Q&A</button>
+      <button class="process-tab text-2xl text-left hover:text-blue-400 cursor-pointer transition" data-target="roleplay">3. Core Lesson – Role Play</button>
+      <button class="process-tab text-2xl text-left hover:text-blue-400 cursor-pointer transition" data-target="summary">4. Summary & Testimonial</button>
+    </div>
+    <div class="w-3/4 h-full relative flex items-center justify-center bg-white overflow-hidden">
+      
+      <!-- Reflective Assessment -->
+      <div id="reflective" class="process-content absolute inset-0 opacity-0 transition-opacity duration-500">
+        <div class="slider relative w-full h-full overflow-hidden flex flex-col">
+          <!-- Image Slider Area -->
+          <div class="image-container relative flex-1 mb-4 overflow-hidden rounded-lg">
+            <div class="slides w-full h-full flex transition-transform duration-700 ease-in-out">
+              <img src="images/Leadership Burout 16-9.jpg" class="w-full h-full object-cover flex-shrink-0" alt="Reflective Assessment 1">
+              <img src="images/COnflict Barriers.jpg" class="w-full h-full object-cover flex-shrink-0" alt="Reflective Assessment 2">
+              <img src="images/Retention Moral.jpg" class="w-full h-full object-cover flex-shrink-0" alt="Reflective Assessment 3">
+            </div>
+            <button class="prev absolute left-4 top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/50 p-4 rounded-full text-2xl transition z-10">&#10094;</button>
+            <button class="next absolute right-4 top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/50 p-4 rounded-full text-2xl transition z-10">&#10095;</button>
+          </div>
+          <!-- YouTube Video -->
+          <div class="youtube-container mb-4">
+            <iframe src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID_1" class="w-full h-48 rounded-lg" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <!-- Dots -->
+          <div class="dots absolute bottom-6 w-full flex justify-center space-x-3">
+            <span class="dot w-6 h-6 rounded-full bg-blue-400 cursor-pointer transition hover:scale-125" data-slide="0"></span>
+            <span class="dot w-6 h-6 rounded-full bg-white/40 cursor-pointer transition hover:scale-125" data-slide="1"></span>
+            <span class="dot w-6 h-6 rounded-full bg-white/40 cursor-pointer transition hover:scale-125" data-slide="2"></span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Interactive Q&A -->
+      <div id="qa" class="process-content absolute inset-0 opacity-0 transition-opacity duration-500">
+        <div class="slider relative w-full h-full overflow-hidden flex flex-col">
+          <!-- Image Slider Area -->
+          <div class="image-container relative flex-1 mb-4 overflow-hidden rounded-lg">
+            <div class="slides w-full h-full flex transition-transform duration-700 ease-in-out">
+              <img src="images/Itetactive QandA.png" class="w-full h-full object-cover flex-shrink-0" alt="Interactive Q&A 1">
+              <img src="images/qa2.jpg" class="w-full h-full object-cover flex-shrink-0" alt="Interactive Q&A 2">
+              <img src="images/qa3.jpg" class="w-full h-full object-cover flex-shrink-0" alt="Interactive Q&A 3">
+            </div>
+            <button class="prev absolute left-4 top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/50 p-4 rounded-full text-2xl transition z-10">&#10094;</button>
+            <button class="next absolute right-4 top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/50 p-4 rounded-full text-2xl transition z-10">&#10095;</button>
+          </div>
+          <!-- YouTube Video -->
+          <div class="youtube-container mb-4">
+            <iframe src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID_2" class="w-full h-48 rounded-lg" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <!-- Dots -->
+          <div class="dots absolute bottom-6 w-full flex justify-center space-x-3">
+            <span class="dot w-6 h-6 rounded-full bg-blue-400 cursor-pointer transition hover:scale-125" data-slide="0"></span>
+            <span class="dot w-6 h-6 rounded-full bg-white/40 cursor-pointer transition hover:scale-125" data-slide="1"></span>
+            <span class="dot w-6 h-6 rounded-full bg-white/40 cursor-pointer transition hover:scale-125" data-slide="2"></span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Role Play -->
+      <div id="roleplay" class="process-content absolute inset-0 opacity-0 transition-opacity duration-500">
+        <div class="slider relative w-full h-full overflow-hidden flex flex-col">
+          <!-- Image Slider Area -->
+          <div class="image-container relative flex-1 mb-4 overflow-hidden rounded-lg">
+            <div class="slides w-full h-full flex transition-transform duration-700 ease-in-out">
+              <img src="images/role1.jpg" class="w-full h-full object-cover flex-shrink-0" alt="Role Play 1">
+              <img src="images/role2.jpg" class="w-full h-full object-cover flex-shrink-0" alt="Role Play 2">
+              <img src="images/role3.jpg" class="w-full h-full object-cover flex-shrink-0" alt="Role Play 3">
+            </div>
+            <button class="prev absolute left-4 top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/50 p-4 rounded-full text-2xl transition z-10">&#10094;</button>
+            <button class="next absolute right-4 top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/50 p-4 rounded-full text-2xl transition z-10">&#10095;</button>
+          </div>
+          <!-- YouTube Video -->
+          <div class="youtube-container mb-4">
+            <iframe src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID_3" class="w-full h-48 rounded-lg" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <!-- Dots -->
+          <div class="dots absolute bottom-6 w-full flex justify-center space-x-3">
+            <span class="dot w-6 h-6 rounded-full bg-blue-400 cursor-pointer transition hover:scale-125" data-slide="0"></span>
+            <span class="dot w-6 h-6 rounded-full bg-white/40 cursor-pointer transition hover:scale-125" data-slide="1"></span>
+            <span class="dot w-6 h-6 rounded-full bg-white/40 cursor-pointer transition hover:scale-125" data-slide="2"></span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Summary & Testimonial -->
+      <div id="summary" class="process-content absolute inset-0 opacity-0 transition-opacity duration-500">
+        <div class="slider relative w-full h-full overflow-hidden flex flex-col">
+          <!-- Image Slider Area -->
+          <div class="image-container relative flex-1 mb-4 overflow-hidden rounded-lg">
+            <div class="slides w-full h-full flex transition-transform duration-700 ease-in-out">
+              <img src="images/summary1.jpg" class="w-full h-full object-cover flex-shrink-0" alt="Summary 1">
+              <img src="images/summary2.jpg" class="w-full h-full object-cover flex-shrink-0" alt="Summary 2">
+              <img src="images/summary3.jpg" class="w-full h-full object-cover flex-shrink-0" alt="Summary 3">
+            </div>
+            <button class="prev absolute left-4 top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/50 p-4 rounded-full text-2xl transition z-10">&#10094;</button>
+            <button class="next absolute right-4 top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/50 p-4 rounded-full text-2xl transition z-10">&#10095;</button>
+          </div>
+          <!-- YouTube Video -->
+          <div class="youtube-container mb-4">
+            <iframe src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID_4" class="w-full h-48 rounded-lg" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <!-- Dots -->
+          <div class="dots absolute bottom-6 w-full flex justify-center space-x-3">
+            <span class="dot w-6 h-6 rounded-full bg-blue-400 cursor-pointer transition hover:scale-125" data-slide="0"></span>
+            <span class="dot w-6 h-6 rounded-full bg-white/40 cursor-pointer transition hover:scale-125" data-slide="1"></span>
+            <span class="dot w-6 h-6 rounded-full bg-white/40 cursor-pointer transition hover:scale-125" data-slide="2"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Testimonials Section -->
+<section id="trust" class="py-16 px-4 md:px-8 bg-white">
+  <h2 class="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12">What Clients Say</h2>
+  <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+    <div class="p-6 border rounded-lg shadow-md bg-white/90 backdrop-blur">
+      <p class="text-base md:text-lg mb-4">"Grace helped me see my blind spots and grow as a leader. Highly recommended!"</p>
+      <span class="block font-semibold text-blue-600">– John D.</span>
+    </div>
+    <div class="p-6 border rounded-lg shadow-md bg-white/90 backdrop-blur">
+      <p class="text-base md:text-lg mb-4">"Her emotional intelligence training transformed our team culture."</p>
+      <span class="block font-semibold text-blue-600">– Sarah M.</span>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-16 px-4 md:px-8 bg-gradient-to-b from-gray-100 to-white">
+  <h2 class="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12">Contact Us</h2>
+  <div class="max-w-2xl mx-auto">
+    <form id="contactForm" class="flex flex-col gap-4 bg-white/50 backdrop-blur-lg rounded-2xl p-6 md:p-8 shadow-xl ring-1 ring-gray-200">
+      <input type="text" name="full_name" placeholder="Full Name" required 
+        class="p-4 border rounded-lg bg-white/80 focus:outline-none focus:ring-2 focus:ring-blue-400">
+      <input type="email" name="email" placeholder="Email" required 
+        class="p-4 border rounded-lg bg-white/80 focus:outline-none focus:ring-2 focus:ring-blue-400">
+      <textarea name="message" placeholder="Message" rows="4" required 
+        class="p-4 border rounded-lg bg-white/80 focus:outline-none focus:ring-2 focus:ring-blue-400"></textarea>
+      <button type="submit" 
+        class="bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg shadow-lg transition font-bold">
+        Send Message
+      </button>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<script>
+// Sidebar Toggle
+const sidebar = document.getElementById("sidebar");
+const toggleBtns = [document.getElementById("sidebarToggle"), document.getElementById("sidebarToggleDesktop")];
+toggleBtns.forEach(btn => btn?.addEventListener("click", () => sidebar.classList.toggle("-translate-x-64")));
+
+// Smooth Scroll & Active Link
+const sections = document.querySelectorAll("main section");
+const navLinks = document.querySelectorAll(".nav-link");
+window.addEventListener("scroll", () => {
+  let current = "";
+  sections.forEach(section => { if (pageYOffset >= section.offsetTop - 100) current = section.id; });
+  navLinks.forEach(link => link.classList.toggle("bg-white/20", link.getAttribute("href") === `#${current}`));
+});
+navLinks.forEach(link => link.addEventListener("click", e => {
+  e.preventDefault();
+  document.querySelector(link.getAttribute("href"))?.scrollIntoView({behavior:"smooth"});
+  if(window.innerWidth<768) sidebar.classList.add("-translate-x-64");
+}));
+
+// Services Tabs - Working
+const tabButtons = document.querySelectorAll('.tab-btn');
+const tabContents = document.querySelectorAll('.tab-content');
+
+tabButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    // Remove active state from all tabs
+    tabButtons.forEach(b => {
+      b.classList.remove('bg-blue-600', 'text-white');
+      b.classList.add('bg-gray-200', 'text-gray-800');
+    });
+    
+    // Hide all tab contents
+    tabContents.forEach(c => c.classList.add('hidden'));
+    
+    // Activate clicked tab
+    btn.classList.remove('bg-gray-200', 'text-gray-800');
+    btn.classList.add('bg-blue-600', 'text-white');
+    
+    // Show corresponding content
+    const targetContent = document.getElementById(btn.dataset.tab);
+    if (targetContent) {
+      targetContent.classList.remove('hidden');
+    }
+  });
+});
+
+// Topics Tabs
+const topicButtons = document.querySelectorAll('.topic-tab');
+const topicContents = document.querySelectorAll('.topic-content');
+
+topicButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    // Remove active state from all topic tabs
+    topicButtons.forEach(b => {
+      b.classList.remove('bg-white/30');
+      b.classList.add('bg-white/20');
+    });
+    
+    // Hide all topic contents
+    topicContents.forEach(c => {
+      c.style.opacity = '0';
+      c.classList.add('absolute');
+    });
+    
+    // Activate clicked tab
+    btn.classList.remove('bg-white/20');
+    btn.classList.add('bg-white/30');
+    
+    // Show corresponding content
+    const targetContent = document.getElementById(btn.dataset.topic);
+    if (targetContent) {
+      setTimeout(() => {
+        targetContent.style.opacity = '1';
+        targetContent.classList.remove('absolute');
+      }, 150);
+    }
+  });
+});
+
+// Lead & Contact Forms
+document.getElementById("leadForm")?.addEventListener("submit", e => { e.preventDefault(); alert("✅ Thank you!"); e.target.reset(); });
+document.getElementById("contactForm")?.addEventListener("submit", e => { e.preventDefault(); alert("✅ Message sent!"); e.target.reset(); });
+
+// Process Tabs
+const processTabs = document.querySelectorAll('.process-tab');
+const processContents = document.querySelectorAll('.process-content');
+
+processTabs.forEach(tab => tab.addEventListener('click', () => {
+  processTabs.forEach(t => t.classList.remove('text-blue-400','font-bold'));
+  tab.classList.add('text-blue-400','font-bold');
+  processContents.forEach(c => c.style.opacity = 0);
+  document.getElementById(tab.dataset.target).style.opacity = 1;
+}));
+processContents[0].style.opacity = 1; 
+processTabs[0].classList.add('text-blue-400','font-bold');
+
+// FULLY FUNCTIONAL PROCESS SLIDERS - 5 SECOND LOOP WITH HOVER PAUSE
+document.querySelectorAll('#process .slider').forEach(slider => {
+  const slides = slider.querySelector('.slides');
+  const slideItems = slides.children;
+  const prevBtn = slider.querySelector('.prev');
+  const nextBtn = slider.querySelector('.next');
+  const dots = slider.querySelectorAll('.dot');
+  const sliderContainer = slider; // Hover target is the entire slider
+  
+  let currentIndex = 0;
+  let autoSlideInterval;
+  let isPaused = false;
+
+  function updateSlider() {
+    // Move slides
+    slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+    
+    // Update dots
+    dots.forEach((dot, i) => {
+      if (i === currentIndex) {
+        dot.classList.remove('bg-white/40');
+        dot.classList.add('bg-blue-400');
+      } else {
+        dot.classList.remove('bg-blue-400');
+        dot.classList.add('bg-white/40');
+      }
+    });
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % slideItems.length;
+    updateSlider();
+  }
+
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + slideItems.length) % slideItems.length;
+    updateSlider();
+  }
+
+  function startAutoSlide() {
+    if (!isPaused) {
+      autoSlideInterval = setInterval(nextSlide, 5000); // 5 seconds
+    }
+  }
+
+  function stopAutoSlide() {
+    clearInterval(autoSlideInterval);
+  }
+
+  // Dot click handlers
+  dots.forEach((dot, idx) => {
+    dot.addEventListener('click', () => {
+      stopAutoSlide();
+      currentIndex = idx;
+      updateSlider();
+      startAutoSlide();
+    });
+  });
+
+  // Navigation button handlers
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+      stopAutoSlide();
+      prevSlide();
+      startAutoSlide();
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      stopAutoSlide();
+      nextSlide();
+      startAutoSlide();
+    });
+  }
+
+  // Pause on hover functionality - ENTIRE SLIDER AREA
+  sliderContainer.addEventListener('mouseenter', () => {
+    isPaused = true;
+    stopAutoSlide();
+  });
+
+  sliderContainer.addEventListener('mouseleave', () => {
+    isPaused = false;
+    startAutoSlide();
+  });
+
+  // Initialize slider
+  updateSlider();
+  startAutoSlide();
+});
+</script>
+
+</body>
+</html>

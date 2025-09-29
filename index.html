@@ -241,22 +241,46 @@
   <div class="flex flex-1 gap-8">
     <!-- Side Menu -->
     <nav class="w-1/4 bg-gray-800 bg-opacity-60 backdrop-blur-md rounded-lg p-8 flex flex-col justify-center space-y-6 shadow-lg ring-1 ring-white/10">
-      <button class="process-tab text-2xl text-left font-semibold rounded-lg px-4 py-3 hover:bg-blue-600 transition focus:outline-none focus:ring-2 focus:ring-blue-400" data-target="reflective">1. Reflective Assessment</button>
-      <button class="process-tab text-2xl text-left font-semibold rounded-lg px-4 py-3 hover:bg-blue-600 transition focus:outline-none focus:ring-2 focus:ring-blue-400" data-target="qa">2. Interactive Q&amp;A</button>
-      <button class="process-tab text-2xl text-left font-semibold rounded-lg px-4 py-3 hover:bg-blue-600 transition focus:outline-none focus:ring-2 focus:ring-blue-400" data-target="roleplay">3. Core Lesson – Role Play</button>
-      <button class="process-tab text-2xl text-left font-semibold rounded-lg px-4 py-3 hover:bg-blue-600 transition focus:outline-none focus:ring-2 focus:ring-blue-400" data-target="summary">4. Summary &amp; Testimonial</button>
+      <button class="process-tab text-2xl text-left font-semibold rounded-lg px-4 py-3 hover:bg-blue-600 transition focus:outline-none focus:ring-2 focus:ring-blue-400" data-target="reflective">1.Welcome and Debreiefing</button>
+      <button class="process-tab text-2xl text-left font-semibold rounded-lg px-4 py-3 hover:bg-blue-600 transition focus:outline-none focus:ring-2 focus:ring-blue-400" data-target="reflective">2. Reflective Assessment</button>
+      <button class="process-tab text-2xl text-left font-semibold rounded-lg px-4 py-3 hover:bg-blue-600 transition focus:outline-none focus:ring-2 focus:ring-blue-400" data-target="qa">3. Interactive Q&amp;A</button>
+      <button class="process-tab text-2xl text-left font-semibold rounded-lg px-4 py-3 hover:bg-blue-600 transition focus:outline-none focus:ring-2 focus:ring-blue-400" data-target="roleplay">4. Core Lesson through Practical Role Play</button>
+      <button class="process-tab text-2xl text-left font-semibold rounded-lg px-4 py-3 hover:bg-blue-600 transition focus:outline-none focus:ring-2 focus:ring-blue-400" data-target="roleplay">5. Activities</button>
+      <button class="process-tab text-2xl text-left font-semibold rounded-lg px-4 py-3 hover:bg-blue-600 transition focus:outline-none focus:ring-2 focus:ring-blue-400" data-target="summary">6. Summary &amp; Testimonial</button>
     </nav>
 
     <!-- Content Area with Slider -->
     <div class="w-3/4 bg-white rounded-lg shadow-2xl overflow-hidden relative flex flex-col">
       <!-- Each tab content container -->
+
+      <div id="Welcome and Debreiefing" class="process-content absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out">
+        <div class="slider relative w-full h-full flex flex-col p-6">
+          <div class="image-container relative flex-1 mb-6 overflow-hidden rounded-lg shadow-inner">
+            <div class="slides flex w-full h-full transition-transform duration-700 ease-in-out will-change-transform">
+              <img src="https://raw.githubusercontent.com/graceraisedmeup/GRMU2/main/images/Leadership Burout 16-9.jpg" alt="Welcome and Debreiefing" class="w-full h-full object-cover flex-shrink-0 rounded-lg" />
+              <img src="https://raw.githubusercontent.com/graceraisedmeup/GRMU2/main/images/COnflict Barriers.jpg" alt="Reflective Assessment 2" class="w-full h-full object-cover flex-shrink-0 rounded-lg" />
+              <img src="https://raw.githubusercontent.com/graceraisedmeup/GRMU2/main/images/Retention Moral.jpg" alt="Reflective Assessment 3" class="w-full h-full object-cover flex-shrink-0 rounded-lg" />
+            </div>
+            <button class="prev absolute left-4 top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/60 p-3 rounded-full text-2xl text-gray-900 transition z-20" aria-label="Previous Slide">&#10094;</button>
+            <button class="next absolute right-4 top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/60 p-3 rounded-full text-2xl text-gray-900 transition z-20" aria-label="Next Slide">&#10095;</button>
+          </div>
+          <div class="dots flex justify-center space-x-4">
+            <span class="dot w-5 h-5 rounded-full bg-blue-500 cursor-pointer shadow-lg transition hover:scale-110" data-slide="0"></span>
+            <span class="dot w-5 h-5 rounded-full bg-white/50 cursor-pointer shadow-lg transition hover:scale-110" data-slide="1"></span>
+            <span class="dot w-5 h-5 rounded-full bg-white/50 cursor-pointer shadow-lg transition hover:scale-110" data-slide="2"></span>
+          </div>
+        </div>
+      </div>
+
+
+      
       <div id="reflective" class="process-content absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out">
         <div class="slider relative w-full h-full flex flex-col p-6">
           <div class="image-container relative flex-1 mb-6 overflow-hidden rounded-lg shadow-inner">
             <div class="slides flex w-full h-full transition-transform duration-700 ease-in-out will-change-transform">
-              <img src="images/Leadership Burout 16-9.jpg" alt="Reflective Assessment 1" class="w-full h-full object-cover flex-shrink-0 rounded-lg" />
-              <img src="images/COnflict Barriers.jpg" alt="Reflective Assessment 2" class="w-full h-full object-cover flex-shrink-0 rounded-lg" />
-              <img src="images/Retention Moral.jpg" alt="Reflective Assessment 3" class="w-full h-full object-cover flex-shrink-0 rounded-lg" />
+              <img src="https://raw.githubusercontent.com/graceraisedmeup/GRMU2/main/images/Leadership Burout 16-9.jpg" alt="Reflective Assessment 1" class="w-full h-full object-cover flex-shrink-0 rounded-lg" />
+              <img src="https://raw.githubusercontent.com/graceraisedmeup/GRMU2/main/images/COnflict Barriers.jpg" alt="Reflective Assessment 2" class="w-full h-full object-cover flex-shrink-0 rounded-lg" />
+              <img src="https://raw.githubusercontent.com/graceraisedmeup/GRMU2/main/images/Retention Moral.jpg" alt="Reflective Assessment 3" class="w-full h-full object-cover flex-shrink-0 rounded-lg" />
             </div>
             <button class="prev absolute left-4 top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/60 p-3 rounded-full text-2xl text-gray-900 transition z-20" aria-label="Previous Slide">&#10094;</button>
             <button class="next absolute right-4 top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/60 p-3 rounded-full text-2xl text-gray-900 transition z-20" aria-label="Next Slide">&#10095;</button>
@@ -289,14 +313,14 @@
           </div>
         </div>
       </div>
-
+https://raw.githubusercontent.com/graceraisedmeup/GRMU2/main/
       <div id="roleplay" class="process-content absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out">
         <div class="slider relative w-full h-full flex flex-col p-6">
           <div class="image-container relative flex-1 mb-6 overflow-hidden rounded-lg shadow-inner">
             <div class="slides flex w-full h-full transition-transform duration-700 ease-in-out will-change-transform">
-              <img src="Problem-Solving Workshop at Grace Raised Me Up Corporate Retreat Training.png" alt="Role Play 1" class="w-full h-full object-cover flex-shrink-0 rounded-lg" />
-              <img src="images/role2.jpg" alt="Role Play 2" class="w-full h-full object-cover flex-shrink-0 rounded-lg" />
-              <img src="images/role3.jpg" alt="Role Play 3" class="w-full h-full object-cover flex-shrink-0 rounded-lg" />
+              <img src="https://raw.githubusercontent.com/graceraisedmeup/GRMU2/main/Problem-Solving Workshop .png" alt="Role Play 1" class="w-full h-full object-cover flex-shrink-0 rounded-lg" />
+              <img src="https://raw.githubusercontent.com/graceraisedmeup/GRMU2/main/images/role2.jpg" alt="Role Play 2" class="w-full h-full object-cover flex-shrink-0 rounded-lg" />
+              <img src="https://raw.githubusercontent.com/graceraisedmeup/GRMU2/main/images/role3.jpg" alt="Role Play 3" class="w-full h-full object-cover flex-shrink-0 rounded-lg" />
             </div>
             <button class="prev absolute left-4 top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/60 p-3 rounded-full text-2xl text-gray-900 transition z-20">&#10094;</button>
             <button class="next absolute right-4 top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/60 p-3 rounded-full text-2xl text-gray-900 transition z-20">&#10095;</button>
@@ -308,14 +332,33 @@
           </div>
         </div>
       </div>
-
+5 below
+     <div id="Activities" class="process-content absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out">
+        <div class="slider relative w-full h-full flex flex-col p-6">
+          <div class="image-container relative flex-1 mb-6 overflow-hidden rounded-lg shadow-inner">
+            <div class="slides flex w-full h-full transition-transform duration-700 ease-in-out will-change-transform">
+              <img src="https://raw.githubusercontent.com/graceraisedmeup/GRMU2/main/images/Leadership Burout 16-9.jpg" alt="Welcome and Debreiefing" class="w-full h-full object-cover flex-shrink-0 rounded-lg" />
+              <img src="https://raw.githubusercontent.com/graceraisedmeup/GRMU2/main/images/COnflict Barriers.jpg" alt="Reflective Assessment 2" class="w-full h-full object-cover flex-shrink-0 rounded-lg" />
+              <img src="https://raw.githubusercontent.com/graceraisedmeup/GRMU2/main/images/Retention Moral.jpg" alt="Reflective Assessment 3" class="w-full h-full object-cover flex-shrink-0 rounded-lg" />
+            </div>
+            <button class="prev absolute left-4 top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/60 p-3 rounded-full text-2xl text-gray-900 transition z-20" aria-label="Previous Slide">&#10094;</button>
+            <button class="next absolute right-4 top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/60 p-3 rounded-full text-2xl text-gray-900 transition z-20" aria-label="Next Slide">&#10095;</button>
+          </div>
+          <div class="dots flex justify-center space-x-4">
+            <span class="dot w-5 h-5 rounded-full bg-blue-500 cursor-pointer shadow-lg transition hover:scale-110" data-slide="0"></span>
+            <span class="dot w-5 h-5 rounded-full bg-white/50 cursor-pointer shadow-lg transition hover:scale-110" data-slide="1"></span>
+            <span class="dot w-5 h-5 rounded-full bg-white/50 cursor-pointer shadow-lg transition hover:scale-110" data-slide="2"></span>
+          </div>
+        </div>
+      </div> 
+      6 down
       <div id="summary" class="process-content absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out">
         <div class="slider relative w-full h-full flex flex-col p-6">
           <div class="image-container relative flex-1 mb-6 overflow-hidden rounded-lg shadow-inner">
             <div class="slides flex w-full h-full transition-transform duration-700 ease-in-out will-change-transform">
-              <img src="images/summary1.jpg" alt="Summary 1" class="w-full h-full object-cover flex-shrink-0 rounded-lg" />
-              <img src="images/summary2.jpg" alt="Summary 2" class="w-full h-full object-cover flex-shrink-0 rounded-lg" />
-              <img src="images/summary3.jpg" alt="Summary 3" class="w-full h-full object-cover flex-shrink-0 rounded-lg" />
+              <img src="https://raw.githubusercontent.com/graceraisedmeup/GRMU2/main/images/summary1.jpg" alt="Summary 1" class="w-full h-full object-cover flex-shrink-0 rounded-lg" />
+              <img src="https://raw.githubusercontent.com/graceraisedmeup/GRMU2/main/images/summary2.jpg" alt="Summary 2" class="w-full h-full object-cover flex-shrink-0 rounded-lg" />
+              <img src="https://raw.githubusercontent.com/graceraisedmeup/GRMU2/main/images/summary3.jpg" alt="Summary 3" class="w-full h-full object-cover flex-shrink-0 rounded-lg" />
             </div>
             <button class="prev absolute left-4 top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/60 p-3 rounded-full text-2xl text-gray-900 transition z-20">&#10094;</button>
             <button class="next absolute right-4 top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/60 p-3 rounded-full text-2xl text-gray-900 transition z-20">&#10095;</button>
@@ -744,6 +787,7 @@ document.querySelectorAll('#process .slider').forEach(slider => {
 
 <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97b4a18efe603f85',t:'MTc1NzIzMTU5Mg=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
+
 
 
 
